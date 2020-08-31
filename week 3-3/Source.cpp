@@ -6,10 +6,11 @@ int main()
 	char late, ot;
 	printf("Enter the salary: ");
 	scanf_s("%d", &sal);
-
-	printf("Is he/she late?(Y/N): ");
+	
 	do
 	{
+		printf("Has he/she ever been late for work?(Y/N): ");
+		while (getchar() != '\n');
 		scanf_s("%c", &late);
 	} while (!(late == 'Y' || late == 'y' || late == 'N' || late == 'n'));
 
@@ -18,9 +19,10 @@ int main()
 		sal = sal + 1000;
 	}
 
-	printf("Did he/she do the OT?(Y/N): ");
 	do
-	{
+	{	
+		printf("Did he/she do the OT?(Y/N): ");
+		while (getchar() != '\n');
 		scanf_s("%c", &ot);
 	} while (!(ot == 'Y' || ot == 'y' || ot == 'N' || ot == 'n'));
 
